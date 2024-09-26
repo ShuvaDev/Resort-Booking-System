@@ -1,0 +1,11 @@
+﻿@using WhiteLagoon.Application.Common.Utility
+@{
+    if(User.IsInRole(SD.Admin))
+    {
+        Layout = "_LayoutDashboard";
+    }
+    else
+    {
+        Layout = "_Layout";
+    }
+}
