@@ -24,11 +24,7 @@ namespace WhiteLagoon.Web.Controllers
 
         public async Task<IActionResult> Register(string? returnurl = null)
         {
-            if (!_roleManager.RoleExistsAsync(SD.Admin).GetAwaiter().GetResult())
-            {
-                await _roleManager.CreateAsync(new IdentityRole(SD.Admin));
-                await _roleManager.CreateAsync(new IdentityRole(SD.User));
-            }
+            
 
             RegisterVM registerViewModel = new()
             {
